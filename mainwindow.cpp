@@ -64,6 +64,7 @@ void MainWindow::pushMenu() {
     m_is_printed = false;
     ui->line_edit->clear();
     m_elapsed->restart();
+    index++;
 }
 
 void MainWindow::timeHit() {
