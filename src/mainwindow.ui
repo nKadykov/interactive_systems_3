@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="line_edit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>761</width>
+      <height>91</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="table_widget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>751</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>50</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>360</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>40</number>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column>
+     <property name="text">
+      <string>Time</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Hick</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="action_open_file"/>
+     <addaction name="action_open_folder"/>
+    </widget>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <addaction name="action_save"/>
+    </widget>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="action_new_document"/>
+     <addaction name="action_new_folder"/>
+    </widget>
+    <addaction name="menu_5"/>
+    <addaction name="menu_6"/>
+    <addaction name="menu_7"/>
+    <addaction name="action_print"/>
+    <addaction name="action_network"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menu_8">
+     <property name="title">
+      <string>Copy</string>
+     </property>
+     <addaction name="action_copy"/>
+     <addaction name="action_copy_all"/>
+    </widget>
+    <widget class="QMenu" name="menu_9">
+     <property name="title">
+      <string>Insert</string>
+     </property>
+     <addaction name="action_insert"/>
+     <addaction name="action_insert_new_file"/>
+    </widget>
+    <addaction name="menu_8"/>
+    <addaction name="menu_9"/>
+    <addaction name="action_delete"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <widget class="QMenu" name="menu_11">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="action_new_window"/>
+    </widget>
+    <widget class="QMenu" name="menu_12">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <widget class="QMenu" name="menu_13">
+      <property name="title">
+       <string>Сохранить окно</string>
+      </property>
+      <addaction name="action_save_window"/>
+      <addaction name="action_save_all_window"/>
+     </widget>
+     <addaction name="menu_13"/>
+    </widget>
+    <addaction name="menu_11"/>
+    <addaction name="action_wrap_window"/>
+    <addaction name="menu_12"/>
+   </widget>
+   <widget class="QMenu" name="menu_10">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_10"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_open_file">
+   <property name="text">
+    <string>New file</string>
+   </property>
+  </action>
+  <action name="action_open_folder">
+   <property name="text">
+    <string>New folder</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="action_new_document">
+   <property name="text">
+    <string>New file</string>
+   </property>
+  </action>
+  <action name="action_new_folder">
+   <property name="text">
+    <string>New folder</string>
+   </property>
+  </action>
+  <action name="action_print">
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="action_copy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="action_copy_all">
+   <property name="text">
+    <string>Copy all</string>
+   </property>
+  </action>
+  <action name="action_insert">
+   <property name="text">
+    <string>Insert</string>
+   </property>
+  </action>
+  <action name="action_insert_new_file">
+   <property name="text">
+    <string>Insert new file</string>
+   </property>
+  </action>
+  <action name="action_delete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="action_network">
+   <property name="text">
+    <string>Network</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="action_wrap_window">
+   <property name="text">
+    <string>Wrap window</string>
+   </property>
+  </action>
+  <action name="action_new_window">
+   <property name="text">
+    <string>New window</string>
+   </property>
+  </action>
+  <action name="action_save_window">
+   <property name="text">
+    <string>Сохранить одно окно</string>
+   </property>
+  </action>
+  <action name="action_save_all_window">
+   <property name="text">
+    <string>Сохранить все окна</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
