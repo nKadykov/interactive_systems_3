@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include <QTableWidgetItem>
 #include <QFont>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -52,23 +53,29 @@ MainWindow::~MainWindow()
 
 void MainWindow::pushMenu() {
     QAction *action = qobject_cast<QAction *>(sender());
-    if(m_is_printed && (action->text() == ui->line_edit->text())) {
-        if(index > 20) {
-            index = 1;
-        }
-        QTableWidgetItem* item1 = new QTableWidgetItem;
-        int e = m_elapsed->elapsed();
-        item1->setText(QString::number(e / 1000) + "." + QString::number(e % 1000));
-        ui->table_widget->setItem(index, 0, item1);
-        QTableWidgetItem* item2 = new QTableWidgetItem;
-        int hick = qLn(19) / qLn(2);
-        item2->setText(QString::number(hick));
-        ui->table_widget->setItem(index, 1, item2);
-        m_is_printed = false;
-        ui->line_edit->clear();
-        m_elapsed->restart();
-        index++;
+    if(!m_is_printed) {
+        QMessageBox::information(this, "Error", "Not printed yet");
+        return;
     }
+    if(!(action->text() == ui->line_edit->text())) {
+        QMessageBox::information(this, "Error", "Wrong button");
+        return;
+    }
+    if(index > 20) {
+        index = 1;
+    }
+    QTableWidgetItem* item1 = new QTableWidgetItem;
+    int e = m_elapsed->elapsed();
+    item1->setText(QString::number(e / 1000) + "." + QString::number(e % 1000));
+    ui->table_widget->setItem(index, 0, item1);
+    QTableWidgetItem* item2 = new QTableWidgetItem;
+    int hick = qLn(19) / qLn(2);
+    item2->setText(QString::number(hick));
+    ui->table_widget->setItem(index, 1, item2);
+    m_is_printed = false;
+    ui->line_edit->clear();
+    m_elapsed->restart();
+    index++;
 }
 
 void MainWindow::timeHit() {
