@@ -41,7 +41,8 @@ private:
         OPEN_FILE,
         COPY_ALL,
         SAVE_WINDOW,
-        OPEN_FOLDER
+        OPEN_FOLDER,
+        VIEW
     };
     bool m_is_printed = false;
     QTimer* m_timer;
