@@ -69,7 +69,7 @@ void MainWindow::pushMenu() {
     item1->setText(QString::number(e / 1000) + "." + QString::number(e % 1000));
     ui->table_widget->setItem(index, 0, item1);
     QTableWidgetItem* item2 = new QTableWidgetItem;
-    int hick = qLn(19) / qLn(2);
+    float hick = qLn(19) / qLn(2);
     item2->setText(QString::number(hick));
     ui->table_widget->setItem(index, 1, item2);
     m_is_printed = false;
